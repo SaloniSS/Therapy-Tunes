@@ -38,11 +38,16 @@ export function Chat() {
     );
 
     let message = messages[0].text;
-    Dialogflow_V2.requestQuery(
-      message,
-      (result) => handleGoogleResponse(result),
-      (error) => console.log(error)
-    );
+
+    if (message.includes("song")) {
+      //get mood and do spotify stuff here
+    } else {
+      Dialogflow_V2.requestQuery(
+        message,
+        (result) => handleGoogleResponse(result),
+        (error) => console.log(error)
+      );
+    }
   };
 
   const handleGoogleResponse = (result) => {
