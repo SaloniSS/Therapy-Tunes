@@ -8,9 +8,9 @@ export function Chat() {
 
   const BOT_USER = {
     _id: 2,
-    name: "Helper",
+    name: "Pinguino",
     avatar:
-      "https://cdn.discordapp.com/attachments/622809737435676677/711452177524195328/hdt_logo.png",
+      "https://cache.desktopnexus.com/thumbseg/2508/2508578-bigthumbnail.jpg",
   };
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function Chat() {
       {
         _id: 1,
         text:
-          "Hello friend! My name is <name> and I'm here to help you! How was your day today?",
+          "Hello friend! My name is Pinguino and I'm here to help you! How was your day today?",
         createdAt: new Date(),
         user: BOT_USER,
       },
