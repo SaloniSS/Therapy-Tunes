@@ -68,7 +68,24 @@ export function Chat() {
   const getSong = (mood) => {
     console.log("Mood", mood);
     console.log("Access Token", accessToken);
+
+    getRecommendation();
   };
+
+  async function getRecommendation() {
+    const config = {
+      method: "get",
+      url:
+        "https://api.spotify.com/v1/recommendations?seed_tracks=0c6xIDDpzE81m2q797ordA&min_energy=0.4&min_popularity=50&market=US",
+      headers: { Authorization: "Bearer " + accessToken },
+      json: true,
+    };
+    let res = await axios(config);
+    const randomIndex = Math.floor(Math.random() * res.data.tracks.length);
+    console.log("Song", res.data.tracks[0].external_urls.spotify);
+    const recommendedSong = res.data.tracks[randomIndex].external_urls.spotify;
+    sendBotResponse("I recommend listening to this song: " + recommendedSong);
+  }
 
   const handleGoogleResponse = (result) => {
     let text = result.queryResult.fulfillmentMessages[0].text.text[0];
