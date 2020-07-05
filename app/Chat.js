@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { GiftedChat } from "react-native-gifted-chat";
 import { Dialogflow_V2 } from "react-native-dialogflow";
 import { dialogflowConfig } from "./env";
+import SpotifyWebApi from "spotify-web-api-node";
+import { spotifyConfig } from "./env";
+
+var spotifyApi = new SpotifyWebApi({
+  clientId: spotifyConfig.clientID,
+  clientSecret: spotifyConfig.clientSecret,
+});
 
 export function Chat() {
   const [messages, setMessages] = useState([]);
@@ -40,7 +47,24 @@ export function Chat() {
     let message = messages[0].text;
 
     if (message.includes("song")) {
-      //get mood and do spotify stuff here
+      let words = message.split(" ");
+      let mood = words[words.indexOf("song") - 1];
+      console.log(mood);
+      spotifyApi.clientCredentialsGrant().then(
+        function (data) {
+          console.log("The access token expires in " + data.body["expires_in"]);
+          console.log("The access token is " + data.body["access_token"]);
+
+          // Save the access token so that it's used in future calls
+          spotifyApi.setAccessToken(data.body["access_token"]);
+        },
+        function (err) {
+          console.log(
+            "Something went wrong when retrieving an access token",
+            err
+          );
+        }
+      );
     } else {
       Dialogflow_V2.requestQuery(
         message,
