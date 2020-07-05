@@ -5,28 +5,26 @@ import ChatBot from "./chat.js";
 function App() {
   return (
     <div className="App">
-      <ChatBot/>
+      <ChatBot />
       <header className="App-header">
-        <h1>Name</h1>
-        <h2>Tagline</h2>
+        <h1>Therapy &amp; Tunes</h1>
+        <h2>Your musical therapy based mental health chatbot</h2>
         <p>
-          Inspiration: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Cras in justo et massa facilisis bibendum. Etiam tincidunt lectus sit
-          amet neque hendrerit, eget malesuada ante ultrices. Aliquam
-          sollicitudin felis sed turpis ultrices, quis convallis ex gravida.
-          Fusce dictum nunc at porta rhoncus. Fusce quis vehicula nibh, a tempor
-          nibh. Cras mauris nulla, aliquet et tincidunt accumsan, vestibulum eu
-          tortor. In ultricies at libero nec tristique. Donec pellentesque
-          tortor sit amet tortor congue, non efficitur nisl pharetra. Ut
-          pharetra molestie quam in interdum. Phasellus enim velit, scelerisque
-          ut orci sed, facilisis volutpat purus. Cras imperdiet, risus ac
-          pretium euismod, sem sapien aliquam lectus, in malesuada sem orci ut
-          sapien. Duis mollis ornare arcu in bibendum. Suspendisse viverra
-          facilisis volutpat. Suspendisse aliquam, elit sit amet pharetra
-          blandit, tortor sapien ornare purus, ut elementum velit quam vitae
-          enim.
+          According to a USC research, sharing your feelings with others reduces
+          stress. But who do you talk to if you want your feelings to be
+          confidential? Have you tried journaling your feelings but it seems
+          ineffective to you without any interaction? Do you just want someone
+          to listen to? In today's day and age, where everyone passes each other
+          with their headphones or airpods in, people have found solace in
+          music, leading to musical therapy being one of the leading forms of
+          therapy. But sometimes when you are in a happy mood or are in the mood
+          for a pick-me-up, scrolling through long lists of songs seems mentally
+          exhaustive. Have you ever wished that you could easily find songs that
+          boost your mood? Are your confidants great listeners but bad singers?
+          We invite you to try Therapy &amp; Tunes, a musical therapy based
+          mental health chatbot.
         </p>
-        <iframe
+        {/* <iframe
           width="840"
           height="473"
           src="https://www.youtube.com/embed/pxGTX0nk6RA"
@@ -34,27 +32,15 @@ function App() {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           title="Demo Video"
-        ></iframe>
+        ></iframe> */}
+        <img src={"https://i.ytimg.com/vi/7YOJppqH_3c/maxresdefault.jpg"} />
         <p>
-          What it does: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Cras in justo et massa facilisis bibendum. Etiam tincidunt lectus sit
-          amet neque hendrerit, eget malesuada ante ultrices. Aliquam
-          sollicitudin felis sed turpis ultrices, quis convallis ex gravida.
-          Fusce dictum nunc at porta rhoncus. Fusce quis vehicula nibh, a tempor
-          nibh. Cras mauris nulla, aliquet et tincidunt accumsan, vestibulum eu
-          tortor. In ultricies at libero nec tristique. Donec pellentesque
-          tortor sit amet tortor congue, non efficitur nisl pharetra. Ut
-          pharetra molestie quam in interdum. Phasellus enim velit, scelerisque
-          ut orci sed, facilisis volutpat purus. Cras imperdiet, risus ac
-          pretium euismod, sem sapien aliquam lectus, in malesuada sem orci ut
-          sapien. Duis mollis ornare arcu in bibendum. Suspendisse viverra
-          facilisis volutpat. Suspendisse aliquam, elit sit amet pharetra
-          blandit, tortor sapien ornare purus, ut elementum velit quam vitae
-          enim.
+          Therapy &amp; Tunes is a mobile application to help you stay calm.
+          Everyday Therapy &amp; Tunes asks you about your day and feelings.
+          They are always here to listen about your feelings and even suggest
+          activities and resources for you. When asked for song recommendations
+          based on mood, it also recommends you some songs.
         </p>
-
-        <h3>Sample Commands:</h3>
-        <p>"Command 1" What it does</p>
 
         <div className="button-area">
           <button className="button" variant="contained">
@@ -72,7 +58,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ask Google to Talk To "name"
+              Ask Google to Talk To Therapy &amp; Tunes
             </a>
           </button>
         </div>
