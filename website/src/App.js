@@ -8,7 +8,7 @@ function App() {
       <ChatBot />
       <header className="App-header">
         <h1>Therapy &amp; Tunes</h1>
-        <h2>Your musical therapy based mental health chatbot</h2>
+        <h2>Your musical-therapy based mental health chatbot!</h2>
         <p>
           According to a USC study, sharing your feelings with others reduces
           stress. But who do you talk to if you want your feelings to be
