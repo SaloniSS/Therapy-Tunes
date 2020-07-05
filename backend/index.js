@@ -42,6 +42,6 @@ app.get("/spotify-token", (req, res) => {
 
 app.use(express.json());
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, console.log(`Server running mode on port ${PORT}`));
