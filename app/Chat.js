@@ -52,8 +52,14 @@ export function Chat() {
 
   const handleGoogleResponse = (result) => {
     let text = result.queryResult.fulfillmentMessages[0].text.text[0];
-    sendBotResponse(text);
+    wait(1000).then(() => sendBotResponse(text));
   };
+
+  function wait(timeout) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, timeout);
+    });
+  }
 
   const sendBotResponse = (text) => {
     let msg = {
