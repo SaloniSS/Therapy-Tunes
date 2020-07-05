@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { GiftedChat } from "react-native-gifted-chat";
 import { Dialogflow_V2 } from "react-native-dialogflow";
 import { dialogflowConfig } from "./env";
@@ -38,11 +38,16 @@ export function Chat() {
     );
 
     let message = messages[0].text;
-    Dialogflow_V2.requestQuery(
-      message,
-      (result) => handleGoogleResponse(result),
-      (error) => console.log(error)
-    );
+
+    if (message.includes("song")) {
+      //get mood and do spotify stuff here
+    } else {
+      Dialogflow_V2.requestQuery(
+        message,
+        (result) => handleGoogleResponse(result),
+        (error) => console.log(error)
+      );
+    }
   };
 
   const handleGoogleResponse = (result) => {
