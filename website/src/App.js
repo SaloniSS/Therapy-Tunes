@@ -48,6 +48,7 @@ function App() {
               href="https://play.google.com/store/apps/details?id=come.naturedex.app"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
               Download Android App
             </a>
@@ -57,6 +58,7 @@ function App() {
               href="https://assistant.google.com/services/invoke/uid/00000097827472c9?hl=en"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
               Ask Google to Talk To Therapy &amp; Tunes
             </a>
@@ -74,6 +76,7 @@ function App() {
               href="https://devpost.com/software/naturedex"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
               More Info
             </a>
@@ -83,6 +86,7 @@ function App() {
               href="https://github.com/SaloniSS/Hackcation"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
               Source Code
             </a>
