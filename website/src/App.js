@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
+import ChatBot from "./chat.js";
 
 function App() {
   return (
     <div className="App">
+      <ChatBot/>
       <header className="App-header">
         <h1>Name</h1>
         <h2>Tagline</h2>
