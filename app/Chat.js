@@ -55,7 +55,7 @@ export function Chat() {
       //get mood and do spotify stuff here
       let words = message.split(" ");
       let mood = words[words.indexOf("song") - 1];
-      getSong(mood);
+      getRecommendation(mood);
     } else {
       Dialogflow_V2.requestQuery(
         message,
@@ -65,21 +65,32 @@ export function Chat() {
     }
   };
 
-  const getSong = (mood) => {
+  async function getRecommendation(mood) {
     console.log("Mood", mood);
     console.log("Access Token", accessToken);
 
-    getRecommendation();
-  };
+    let seedParams;
 
-  async function getRecommendation() {
+    if (mood.includes("calm")) {
+      seedParams = "4AkP8JV90cs05Q8vlVunMe&max_speechiness=0.5";
+    } else if (mood.includes("happy")) {
+      seedParams = "60nZcImufyMA1MKQY3dcCH&min_valence=0.75";
+    } else if (mood.includes("sad")) {
+      seedParams = "4kqUlN3craCx3ZIBIfhp2X&max_valence=0.25";
+    } else if (mood.includes("playful")) {
+      seedParams =
+        "5PHPENfE3RVmHGAA2A7Hfx&min_valence=0.5&min_danceability=0.75";
+    } else if (mood.includes("angry")) {
+      seedParams = "4GzDUKkd1RwAtYZMMUBM3W&max_valence=0.5";
+    }
+
     const config = {
       method: "get",
-      url:
-        "https://api.spotify.com/v1/recommendations?seed_tracks=0c6xIDDpzE81m2q797ordA&min_energy=0.4&min_popularity=50&market=US",
+      url: `https://api.spotify.com/v1/recommendations?seed_tracks=${seedParams}&market=US`,
       headers: { Authorization: "Bearer " + accessToken },
       json: true,
     };
+    console.log(config.url);
     let res = await axios(config);
     const randomIndex = Math.floor(Math.random() * res.data.tracks.length);
     console.log("Song", res.data.tracks[0].external_urls.spotify);
