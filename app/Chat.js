@@ -41,6 +41,9 @@ export function Chat() {
 
     if (message.includes("song")) {
       //get mood and do spotify stuff here
+      let words = message.split(" ");
+      let mood = words[words.indexOf("song") - 1];
+      console.log(mood);
     } else {
       Dialogflow_V2.requestQuery(
         message,
