@@ -45,7 +45,7 @@ function App() {
         <div className="button-area">
           <button className="button" variant="contained">
             <a
-              href="https://play.google.com/store/apps/details?id=come.naturedex.app"
+              href="https://storage.googleapis.com/therapy-tunes/Hackcation-b214f86e592645e89aef60fef8c0defe-signed.apk"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
@@ -55,7 +55,7 @@ function App() {
           </button>
           <button className="button" variant="contained">
             <a
-              href="https://assistant.google.com/services/invoke/uid/00000097827472c9?hl=en"
+              href="https://assistant.google.com/services/a/uid/00000062cfd3e93b?hl=en"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
@@ -73,7 +73,7 @@ function App() {
         <div className="button-area">
           <button className="button" variant="contained">
             <a
-              href="https://devpost.com/software/naturedex"
+              href="https://devpost.com/software/therapy-tunes"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
