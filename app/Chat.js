@@ -2,9 +2,21 @@ import React, { useState, useEffect } from "react";
 import { GiftedChat } from "react-native-gifted-chat";
 import { Dialogflow_V2 } from "react-native-dialogflow";
 import { dialogflowConfig } from "./env";
+const axios = require("axios").default;
 
 export function Chat() {
   const [messages, setMessages] = useState([]);
+  const [accessToken, setAccessToken] = useState("");
+
+  useEffect(() => {
+    async function fetchData() {
+      const token = await axios(
+        `https://hackcation-ortbgm.uc.r.appspot.com/spotify-token`
+      );
+      setAccessToken(token.data);
+    }
+    fetchData();
+  }, []);
 
   const BOT_USER = {
     _id: 2,
@@ -43,7 +55,7 @@ export function Chat() {
       //get mood and do spotify stuff here
       let words = message.split(" ");
       let mood = words[words.indexOf("song") - 1];
-      console.log(mood);
+      getSong(mood);
     } else {
       Dialogflow_V2.requestQuery(
         message,
@@ -51,6 +63,11 @@ export function Chat() {
         (error) => console.log(error)
       );
     }
+  };
+
+  const getSong = (mood) => {
+    console.log("Mood", mood);
+    console.log("Access Token", accessToken);
   };
 
   const handleGoogleResponse = (result) => {
