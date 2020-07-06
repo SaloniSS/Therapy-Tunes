@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Hackcation",
-    "slug": "Hackcation",
+    "name": "Therapy & Tunes",
+    "slug": "Therapy-And-Tunes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,14 +15,18 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.therapytunes.app",
+      "icon": "./assets/icon.png"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "android": {
       "package": "com.therapytunes.app",
-      "versionCode": 1
+      "icon": "./assets/icon_android.png",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.therapytunes.app",
+      "versionCode": 2
     }
   }
 }
