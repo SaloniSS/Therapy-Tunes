@@ -16,16 +16,16 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.therapytunes.app",
+      "bundleIdentifier": "com.therapyandtunes.app",
       "icon": "./assets/icon.png"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "android": {
-      "package": "com.therapytunes.app",
+      "package": "com.therapyandtunes.app",
       "icon": "./assets/icon_android.png",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.therapytunes.app",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.therapyandtunes.app",
       "versionCode": 2
     }
   }
