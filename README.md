@@ -10,7 +10,7 @@
 ## Links
 
 [Website](https://hackcation-ortbgm.web.app/)  
-[Android App](https://storage.googleapis.com/therapy-tunes/Hackcation-b214f86e592645e89aef60fef8c0defe-signed.apk)  
+[Android App](https://play.google.com/store/apps/details?id=com.therapyandtunes.app)  
 [Google Assistant Directory](https://assistant.google.com/services/a/uid/00000062cfd3e93b?hl=en)    
 [Demo Video](https://www.youtube.com/watch?v=ZnxKsydT2Xc)    
 [Devpost Submission](https://devpost.com/software/therapy-tunes)
