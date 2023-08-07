@@ -4,7 +4,7 @@
 
 - [Megan Tran](https://github.com/meganjtran)
 - [Reshmi Ranjith](https://github.com/ReshmiCode)
-- [Saloni Shivdasani](https://github.com/SaloniSS)
+- [Saloni](https://github.com/SaloniSS)
 - [Vincent Vu](https://github.com/vincent-vu280)
 
 ## Links
